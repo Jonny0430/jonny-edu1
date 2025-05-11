@@ -1,5 +1,13 @@
-const Index = () => {
-	return <div>Hello world</div>;
-};
+import Heading from "../components/heading/heading"
 
-export default Index;
+
+
+const Index = () => {
+  return (
+    <div>
+      <Heading tag='h2'>children</Heading>
+    </div>
+  )
+}
+
+export default Index
