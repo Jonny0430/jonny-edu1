@@ -4,13 +4,14 @@ import { TextProps } from "./text.props";
 import styles from './text.module.css';
 
 
-const Text = ({ size = 'm', children,}: TextProps): JSX.Element => {
+const Text = ({ size = 'm', children, ...props }: TextProps): JSX.Element => {
     return (
         <p className={cn(styles.p, {
             [styles.s]: size === 's',
             [styles.m]: size === 'm',
             [styles.l]: size === 'l',
         })}
+            {...props}
         >
             {children}
         </p>
