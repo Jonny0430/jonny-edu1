@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Button, Heading, Input, Tag, Text, TextArea } from '../components';
+import Rating from '../components/rating/rating';
 
 const Index = () => {
 	const [isClick, setIsClick] = useState(false);
+	const [rating, setRating] = useState<number>(4);
 
 	return (
 		<div>
@@ -28,6 +30,8 @@ const Index = () => {
 			<div>
 				<TextArea placeholder='Massage' />
 			</div>
+			<br />
+			<Rating rating={rating} isEditabled={true} setRating={setRating} />
 		</div>
 	);
 };
