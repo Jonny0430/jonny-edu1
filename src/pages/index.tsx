@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Button, Heading, Input, Tag, Text, TextArea } from '../components';
 import Rating from '../components/rating/rating';
+import Card from '../components/card/card';
+
 
 const Index = () => {
 	const [isClick, setIsClick] = useState(false);
@@ -32,6 +34,14 @@ const Index = () => {
 			</div>
 			<br />
 			<Rating rating={rating} isEditabled={true} setRating={setRating} />
+			<Card color='primary' style={{ marginTop: '30px' }}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt delectus ipsum accusantium. Quaerat necessitatibus
+				laborum cum quis veniam. Eveniet?
+			</Card>
+			<Card color='primary' style={{ marginTop: '30px' }}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt delectus ipsum accusantium. Quaerat necessitatibus
+				laborum cum quis veniam. Eveniet?
+			</Card>
 		</div>
 	);
 };
