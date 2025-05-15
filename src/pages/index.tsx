@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { Button, Heading, Input, Tag, Text, TextArea } from '../components';
 import Rating from '../components/rating/rating';
 import Card from '../components/card/card';
+import { withLayout } from '../layout/layout';
+import { GetServerSideProps } from 'next';
+import axios from 'axios';
+
 
 
 const Index = () => {
@@ -9,7 +13,7 @@ const Index = () => {
 	const [rating, setRating] = useState<number>(4);
 
 	return (
-		<div>
+		<>
 			<Heading tag='h2'>Heading</Heading>
 			<Text size='s'>Text</Text>
 			<Tag size='s' color='red'>
@@ -42,7 +46,18 @@ const Index = () => {
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt delectus ipsum accusantium. Quaerat necessitatibus
 				laborum cum quis veniam. Eveniet?
 			</Card>
-		</div>
+		</>
 	);
 };
-export default Index
+export default withLayout (Index);
+
+
+export const getServerSideProps: GetServerSideProps = async () => {
+	const { data } = await axios.post('http://localhost:8100/page-find', { firstCategory: 1 });
+
+	return {
+		props: {
+			data,
+		},
+	};
+};
