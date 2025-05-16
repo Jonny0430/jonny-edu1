@@ -4,6 +4,7 @@ import Footer from "./footer/footer"
 import styles from './layout.module.css'
 import Header from "./header/header"
 import Sidebar from "./sidebar/sidebar"
+import { AppContextProvider, IAppContext } from "../context/app.context"
 
 
 
@@ -20,11 +21,13 @@ const Layout = ({ children}: LayoutProps): JSX.Element => {
     )
 }
 
-export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: FunctionComponent<T>) => {
     return function withLayoutComponent(props: T): JSX.Element {
         return (
             <Layout>
-                <Component {...props} />
+                <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+                    <Component {...props} />
+                </AppContextProvider>
             </Layout>
         )
     }
