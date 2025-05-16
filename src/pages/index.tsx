@@ -52,12 +52,12 @@ const Index = () => {
 export default withLayout (Index);
 
 
-export const getServerSideProps: GetServerSideProps = async () => {
-	const { data } = await axios.post('http://localhost:8100/page-find', { firstCategory: 1 });
+// export const getServerSideProps: GetServerSideProps = async () => {
+// 	const { data } = await axios.post('http://localhost:8100/page-find', { firstCategory: 1 });
 
-	return {
-		props: {
-			data,
-		},
-	};
-};
+// 	return {
+// 		props: {
+// 			data,
+// 		},
+// 	};
+// };
