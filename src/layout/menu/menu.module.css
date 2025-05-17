@@ -17,7 +17,7 @@
 
 .firstLevelActive svg,
 .firstLevel:hover svg {
-	fill: var(--primary)
+	fill: var(--primary);
 }
 
 .secondBlock {
@@ -38,7 +38,7 @@
 	width: 100%;
 	padding: 18px;
 	border-radius: 18px;
-	background-color: rgb(245, 245, 204, 0.4);
+	background-color: rgba(245, 245, 204, 0.4);
 	border: 1px solid #e5e5e5;
 }
 
@@ -58,9 +58,20 @@
 	font-size: 14px;
 	line-height: 19px;
 	display: block;
+	margin-left: 20px;
+	padding: 5px;
+	z-index: 9;
+	position: relative;
 }
 
-.firstLevelActive,
-.firstLevel:hover {
+.thirdLevel::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	border: 1px dashed rgba(0, 0, 0, 0.1);
+	top: 100%;
+}
+.thirdLevelActive,
+.thirdLevel:hover {
 	color: var(--primary);
 }

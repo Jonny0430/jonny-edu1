@@ -81,9 +81,9 @@ const Menu = (): JSX.Element => {
 		return pages.map(p => (
 			<Link
 				key={p._id}
-				href={`/${rotue}/${p.alias}`}
+				href={`/${rotue}/${p._id}`}
 				className={cn(styles.thirdLevel, {
-					[styles.thirdLevelActive]: `/${rotue}/${p.alias}` === router.asPath,
+					[styles.thirdLevelActive]: `/${rotue}/${p._id}` === router.asPath,
 				})}
 			>
 				{p.title}
