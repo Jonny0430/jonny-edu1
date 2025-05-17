@@ -1,0 +1,1 @@
+export { default as CoursePageComponentProps } from './course-gap-component/course-page-component'
