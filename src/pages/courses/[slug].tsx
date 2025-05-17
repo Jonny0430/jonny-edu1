@@ -5,11 +5,12 @@ import axios from "axios";
 import { MenuItem } from "../../interfaces/menu.interface";
 import { PageModel } from "../../interfaces/page.interface";
 import { ProductModel } from "../../interfaces/product.interface";
+import { JSX } from "react";
 
 
 
 
-const Index = ({ menu, page, products }: PageProps) => {
+const Index = ({ products }: PageProps): JSX.Element =>  {
     return <div>{products.length}</div>
 }
 
