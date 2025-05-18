@@ -8,4 +8,5 @@ export { default as Rating } from './rating/rating';
 export { default as Card } from './card/card';
 export { default as Divider } from './divider/divider';
 export { default as HhData } from './hh-data/hh-data'
+export { default as Adantages } from './advantages/advantages'
 

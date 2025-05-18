@@ -1,7 +1,8 @@
 import { JSX } from "react";
-import { Heading, HhData, Tag } from "../../components"
+import { Heading, HhData, Tag, Text } from "../../components"
 import styles from './course-page-component.module.css'
 import { CoursePageComponentProps } from "./course-page-component.props";
+import Advantages from "../../components/advantages/advantages";
 
 
 
@@ -32,6 +33,28 @@ const CoursePageComponent = ({ firstCategory, page, products }: CoursePageCompon
 
             {/* {HHDATA} */}
             {page.hh && <HhData {...page.hh} />}
+
+            {/* {ADVANTAGES} */}
+
+            {page.advantages && page.advantages.length && (
+                <>
+                    <Heading tag='h2'>Advantages</Heading>
+                    <Advantages advantages={page.advantages} />
+                </>
+            )}
+
+            {/* {DESCRIPTION} */}
+            <Text>{page.description}</Text>
+
+            {/* {SKILLS} */}
+
+            <Heading tag='h2'>Skills</Heading>
+            {page.tags.length && 
+                page.tags.map(t => (
+                    <Tag color='primary' key={t}>
+                        {t}
+                    </Tag>
+                ))}
         </div>
     );
 };
