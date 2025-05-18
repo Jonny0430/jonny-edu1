@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { Heading, Tag } from "../../components"
+import { Heading, HhData, Tag } from "../../components"
 import styles from './course-page-component.module.css'
 import { CoursePageComponentProps } from "./course-page-component.props";
 
@@ -8,6 +8,7 @@ import { CoursePageComponentProps } from "./course-page-component.props";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CoursePageComponent = ({ firstCategory, page, products }: CoursePageComponentProps): JSX.Element => {
+    console.log('page', page)
     return (
         <div className={styles.wrapper}>
             {/* {TITLE} */}
@@ -30,7 +31,7 @@ const CoursePageComponent = ({ firstCategory, page, products }: CoursePageCompon
             </div>
 
             {/* {HHDATA} */}
-            <div>HHDATA</div>
+            {page.hh && <HhData {...page.hh} />}
         </div>
     );
 };
