@@ -4,6 +4,7 @@ import { CoursePageComponentProps } from "./course-page-component.props";
 import Advantages from "../../components/advantages/advantages";
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 import Product from "../../components/product/product";
+import Sort from "../../components/sort/sort";
 
 
 
@@ -16,7 +17,7 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
             {/* {TITLE} */}
             <div className={styles.title}>
                 <Heading tag='h1'>{page.title}</Heading>
-                <div>Sort...</div>
+                <Sort />
             </div>
 
 
