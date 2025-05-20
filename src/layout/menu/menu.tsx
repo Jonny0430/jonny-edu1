@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { AppContext } from '../../context/app.context';
 import styles from "./menu.module.css";
 import { firstLevelMenu } from '../../helpers/constants';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 const Menu = (): JSX.Element => {

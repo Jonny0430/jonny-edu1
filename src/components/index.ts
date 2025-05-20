@@ -9,4 +9,7 @@ export { default as Card } from './card/card';
 export { default as Divider } from './divider/divider';
 export { default as HhData } from './hh-data/hh-data'
 export { default as Adantages } from './advantages/advantages'
+export { default as Product } from './product/product';
+export { default as ReviewForm } from './reivew-form/reivew-form';
+
 

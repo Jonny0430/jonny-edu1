@@ -3,7 +3,7 @@ export enum PageCategory {
     Books,
 }
 
-export interface HhData {
+export interface HhDataType {
     count: number;
     juniorSalary: number;
     middleSalary: number;
@@ -22,7 +22,7 @@ export interface PageModel {
     title: string;
     tags: string[];
     description: string;
-    hh: HhData;
+    hh: HhDataType;
     advantages: AdvatnageData[];
     category: string;
 }

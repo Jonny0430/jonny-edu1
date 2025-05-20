@@ -1,4 +1,4 @@
-import { JSX, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, Heading, Input, Tag, Text, TextArea } from '../components';
 import Rating from '../components/rating/rating';
 import Card from '../components/card/card';
@@ -6,6 +6,7 @@ import { withLayout } from '../layout/layout';
 import { GetServerSideProps } from 'next';
 import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 

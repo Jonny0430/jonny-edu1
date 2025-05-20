@@ -3,6 +3,7 @@ import { FooterProps } from "./footer.props";
 import styles from './footer.module.css';
 import cn from 'classnames';
 import { format } from 'date-fns';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 

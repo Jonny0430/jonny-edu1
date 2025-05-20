@@ -6,6 +6,7 @@ import styles from './sidebar.module.css';
 import { Divider } from "../../components";
 import Logo from '../logo.svg';
 import Link from "next/link";
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {

@@ -4,6 +4,7 @@ import styles from './rating.module.css';
 import cn from 'classnames';
 import { JSX, useEffect, useState } from 'react';
 import StarIcon from './star.svg';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 const Rating = ({ rating, isEditabled = false, setRating, ...props }: RatingProps): JSX.Element => {
 	const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));

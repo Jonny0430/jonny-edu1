@@ -1,14 +1,15 @@
-import { JSX } from "react";
 import { Heading, HhData, Tag, Text } from "../../components"
 import styles from './course-page-component.module.css'
 import { CoursePageComponentProps } from "./course-page-component.props";
 import Advantages from "../../components/advantages/advantages";
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
+import Product from "../../components/product/product";
 
 
 
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const CoursePageComponent = ({ firstCategory, page, products }: CoursePageComponentProps): JSX.Element => {
+const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.Element => {
     console.log('page', page)
     return (
         <div className={styles.wrapper}>
@@ -21,7 +22,7 @@ const CoursePageComponent = ({ firstCategory, page, products }: CoursePageCompon
 
             {/* {PRODUCTS} */}
 
-            <div>Products</div>
+            <div>{products && products.map((c, idx) => <Product key={idx} product={c} />)}</div>
 
             {/* {VACATIONS} */}
             <div className={styles.hhTitle}>

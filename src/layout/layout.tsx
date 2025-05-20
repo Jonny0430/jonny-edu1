@@ -1,5 +1,6 @@
 import { FunctionComponent, JSX } from "react"
 import { LayoutProps } from "./layout.props"
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 import Footer from "./footer/footer"
 import styles from './layout.module.css'
 import Header from "./header/header"

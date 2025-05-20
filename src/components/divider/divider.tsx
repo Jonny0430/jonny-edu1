@@ -2,6 +2,7 @@ import { JSX } from "react";
 import { DividerProps } from "./divider.props";
 import cn from 'classnames';
 import styles from './divider.module.css';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 

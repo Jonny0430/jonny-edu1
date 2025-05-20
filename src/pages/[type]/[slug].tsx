@@ -7,6 +7,7 @@ import { ProductModel } from "../../interfaces/product.interface";
 import { firstLevelMenu } from "../../helpers/constants";
 import CoursePageComponent from "../../page-components/course-gap-component/course-page-component";
 import { GetServerSideProps } from "next";
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 

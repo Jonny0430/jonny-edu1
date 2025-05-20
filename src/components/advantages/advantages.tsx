@@ -3,6 +3,7 @@ import Divider from "../divider/divider"
 import { AdvantagesProps } from "./advantages.props"
 import styles from './advantages.module.css';
 import CheckIcon from './check.svg';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 

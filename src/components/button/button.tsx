@@ -3,11 +3,12 @@ import styles from './button.module.css';
 import cn from 'classnames';
 import ArrowIcon from './arrow.svg';
 import { JSX } from 'react';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
-const Button = ({ appearance, arrow = 'none', children, ...props }: ButtonProps): JSX.Element => {
+const Button = ({ appearance, arrow = 'none', className, children, ...props }: ButtonProps): JSX.Element => {
 	return (
 		<button
-			className={cn(styles.button, {
+			className={cn(styles.button, className, {
 				[styles.primary]: appearance === 'primary',
 				[styles.ghost]: appearance === 'ghost',
 			})}

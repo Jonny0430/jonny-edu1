@@ -2,6 +2,7 @@ import { JSX } from "react";
 import cn from 'classnames';
 import { TextProps } from "./text.props";
 import styles from './text.module.css';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 const Text = ({ size = 'm', children, ...props }: TextProps): JSX.Element => {

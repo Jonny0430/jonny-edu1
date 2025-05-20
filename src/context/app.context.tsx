@@ -1,6 +1,7 @@
-import { createContext, JSX, PropsWithChildren,useState } from "react";
+import { createContext, PropsWithChildren,useState } from "react";
 import { MenuItem } from "../interfaces/menu.interface";
 import { PageCategory } from "../interfaces/page.interface";
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 

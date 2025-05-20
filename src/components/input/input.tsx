@@ -2,6 +2,7 @@ import { JSX } from "react";
 import { InputProps } from "./input.props";
 import styles from "./input.module.css";
 import cn from "classnames";
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 

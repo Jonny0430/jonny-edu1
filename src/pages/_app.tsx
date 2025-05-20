@@ -1,6 +1,7 @@
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 import { AppProps } from 'next/app';
 import '../styles/globals.css';
-import { JSX } from 'react';
+
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	return <Component {...pageProps} />;

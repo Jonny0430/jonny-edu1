@@ -2,6 +2,7 @@ import { JSX } from "react";
 import { CardProps } from "./card.props";
 import styles from './card.module.css';
 import cn from 'classnames';
+import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 
 

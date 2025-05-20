@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
-import { HhData } from "../../interfaces/page.interface";
+
+import { HhDataType } from "../../interfaces/page.interface";
 
 
-export interface HhDataProps extends HhData {}
+
+export interface HhDataProps extends HhDataType {}
