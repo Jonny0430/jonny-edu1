@@ -1,12 +1,12 @@
-import { JSX } from "react"
 import { SidebarProps } from "./sidebar.props"
 import Menu from "../menu/menu";
-import cn from 'classnames';
 import styles from './sidebar.module.css';
 import { Divider } from "../../components";
 import Logo from '../logo.svg';
+import React from 'react'; 
+import cn from 'classnames';
 import Link from "next/link";
-import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
+import Saerch from "../../components/saerch/saerch";
 
 
 const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
@@ -16,6 +16,7 @@ const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
                 <Logo />
                 <Divider />
             </Link>
+            <Saerch />
             <Menu  />
         </div>
     )
