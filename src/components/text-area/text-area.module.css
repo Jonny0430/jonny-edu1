@@ -16,3 +16,16 @@
 .textArea::placeholder {
     color: var(--gray);
 }
+
+.error {
+    border: 2px solid var(--red);
+}
+
+
+
+.errorMassage {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    color: var(--red);
+}

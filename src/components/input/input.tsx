@@ -1,15 +1,25 @@
-import { JSX } from "react";
+/* eslint-disable react/display-name */
+import { ForwardedRef, JSX } from "react";
 import { InputProps } from "./input.props";
 import styles from "./input.module.css";
-import cn from "classnames";
+import cn from 'classnames';
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
+import { forwardRef } from "react";
 
 
 
-const Input = ({ className, ...props }: InputProps): JSX.Element => {
+
+const Input = forwardRef(({ className, error, ...props }: InputProps, ref: ForwardedRef<HTMLInputElement>): JSX.Element => {
     return (
-        <input className={cn(styles.input, className)} {...props} />
-    )
-}
+        <div className={styles.inputWrapper}>
+            <input className={cn(styles.input, className, {
+                [styles.error]: error,
+            })}
+            ref={ref}
+            {...props} />
+            {error && <span className={styles.errorMessage}>{error.message}</span>}
+        </div>
+    );
+});
 
 export default Input;

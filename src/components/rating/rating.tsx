@@ -1,58 +1,67 @@
 /* eslint-disable react/jsx-key */
-import { RatingProps } from './rating.props';
-import styles from './rating.module.css';
-import cn from 'classnames';
-import { JSX, useEffect, useState } from 'react';
+/* eslint-disable react/display-name */
+import { ForwardedRef, useEffect } from "react";
+import { useState } from "react";
+import { forwardRef } from "react";
 import StarIcon from './star.svg';
-import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
+import cn from 'classnames';
+import styles from './rating.module.css';
+import { RatingProps } from "./rating.props";
+import React from 'react'; 
 
-const Rating = ({ rating, isEditabled = false, setRating, ...props }: RatingProps): JSX.Element => {
-	const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
+const Rating = forwardRef(
+  ({ rating, isEditabled = false, setRating, error, ...props }: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+    const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
-	useEffect(() => {
-		renderRating(rating);
-	}, [rating]);
+    useEffect(() => {
+      renderRating(rating);
+    }, [rating]);
 
-	const renderRating = (currentRating: number) => {
-		const updateArray = ratingArray.map((r: JSX.Element, idx: number) => (
-			<span
-				className={cn(styles.star, {
-					[styles.filled]: idx < currentRating,
-					[styles.editable]: isEditabled,
-				})}
-				onMouseEnter={() => chnageRatingDisplay(idx + 1)}
-				onMouseLeave={() => chnageRatingDisplay(rating)}
-				onClick={() => clickRatingHandler(idx + 1)}
-			>
-				<StarIcon />
-			</span>
-		));
+    const renderRating = (currentRating: number) => {
+      const updateArray = ratingArray.map((r: JSX.Element, idx: number) => (
+        <span
+          className={cn(styles.star, {
+            [styles.filled]: idx < currentRating,
+            [styles.editable]: isEditabled,
+          })}
+          onMouseEnter={() => changeRatingDisplay(idx + 1)} // To'g'ri nomlangan funksiya
+          onMouseLeave={() => changeRatingDisplay(rating)} // To'g'ri nomlangan funksiya
+          onClick={() => clickRatingHandler(idx + 1)} // `idx + 1`ni to'g'ri yuboring
+        >
+          <StarIcon />
+        </span>
+      ));
+      setRatingArray(updateArray);
+    };
 
-		setRatingArray(updateArray);
-	};
+    const changeRatingDisplay = (index: number) => {
+      if (!isEditabled || !setRating) {
+        return;
+      }
+      setRating(index); // Ratingni yangilash
+    };
 
-	const chnageRatingDisplay = (index: number) => {
-		if (!isEditabled) {
-			return;
-		}
+    const clickRatingHandler = (index: number) => {
+      if (isEditabled && setRating) {
+        setRating(index); // Ratingni yangilash
+      }
+    };
 
-		renderRating(index);
-	};
-
-	const clickRatingHandler = (index: number) => {
-		if (!isEditabled || !setRating) {
-			return;
-		}
-		setRating(index);
-	};
-
-	return (
-		<div className={styles.rating} {...props}>
-			{ratingArray.map((rating, idx) => (
-				<span key={idx}>{rating}</span>
-			))}
-		</div>
-	);
-};
+    return (
+      <div
+        className={cn(styles.rating, {
+          [styles.error]: error,
+        })}
+        ref={ref}
+        {...props}
+      >
+        {ratingArray.map((rating, idx) => (
+          <span key={idx}>{rating}</span> // `key={idx}` o'rniga, `ratingArray` dan foydalaning
+        ))}
+        {error && <span className={styles.errorMessage}>{error.message}</span>}
+      </div>
+    );
+  }
+);
 
 export default Rating;
