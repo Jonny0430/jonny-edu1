@@ -118,7 +118,7 @@ const Product = motion(
 				</Card>
 
 				<motion.div animate={reviewOpen ? 'visible' : 'hidden'} variants={variants} initial={'hidden'}>
-					<Card color='white' ref={reviewRef} className={cn(styles.reviews)}>
+					<Card color='white ' ref={reviewRef} className={cn(styles.reviews)}>
 						{product.reviews.map(r => (
 							<div key={r._id}>
 								<Review review={r} />
