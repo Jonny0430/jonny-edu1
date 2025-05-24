@@ -1,17 +1,43 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Heading, HhData, Tag, Text } from "../../components"
 import styles from './course-page-component.module.css'
-import { CoursePageComponentProps } from "./course-page-component.props";
+import { CoursePageComponentProps, sortReducer } from "./course-page-component.props";
 import Advantages from "../../components/advantages/advantages";
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 import Product from "../../components/product/product";
 import Sort from "../../components/sort/sort";
+import { useReducer } from "react";
+import { SortEnum } from "../../components/sort/sort.props";
+import { useEffect } from "react";
+import {  AnimatePresence } from "framer-motion";
 
 
 
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.Element => {
-    console.log('page', page)
+    const [state, dispatch] = useReducer(sortReducer, { sort: SortEnum.Rating, products: products });
+
+    const setSort = (sort: SortEnum) => {
+        dispatch({ type: sort });
+    };
+
+    useEffect(() => {
+        dispatch({ type: 'reset', initialState: products });
+    }, [products]);
+
+        const spring = {
+            type: 'spring',
+            stiffness: 500,
+            damping: 10,
+        };
+
+        const animations = {
+            initial: { scale: 0 },
+            animate: { scale: 1 },
+            exit: { scale: 1 },
+        };
+
     return (
         <div className={styles.wrapper}>
             {/* {TITLE} */}
@@ -23,7 +49,9 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 
             {/* {PRODUCTS} */}
 
-            <div>{products && products.map((c, idx) => <Product key={idx} product={c} />)}</div>
+           <AnimatePresence>
+                {state.products && state.products.map((c, idx) => <Product key={idx} layout transition={spring} {...animations} product={c} />)}
+           </AnimatePresence>
 
             {/* {VACATIONS} */}
             <div className={styles.hhTitle}>
