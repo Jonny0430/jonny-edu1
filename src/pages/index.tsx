@@ -4,12 +4,17 @@ import { GetServerSideProps } from 'next';
 import { MenuItem } from '../interfaces/menu.interface';
 import { withLayout } from '../layout/layout';
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
+import Seo from '../layout/seo/seo';
 
 
 
 const Index = (): JSX.Element => {
 
-	return <HomePageComponent />
+	return (
+		<Seo>
+			<HomePageComponent />
+		</Seo>
+	);
 
 }
 

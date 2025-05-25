@@ -8,12 +8,18 @@ import { firstLevelMenu } from "../../helpers/constants";
 import { GetServerSideProps } from "next";
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 import { CoursePageComponent } from "../../components";
+import Seo from "../../layout/seo/seo";
+
 
 
 
 
 const Index = ({ products, firstCategory, page }: PageProps) => {
-	return <CoursePageComponent products={products} firstCategory={firstCategory} page={page} />;
+		return (
+		<Seo metaTitle={page.title} metaDescription={page.description} metaKeyword={page.tags.toString()}>
+			<CoursePageComponent products={products} firstCategory={firstCategory} page={page} />
+		</Seo>
+	);
 };
 
 export default withLayout(Index);
