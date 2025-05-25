@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import Link from 'next/link';
-import { JSX, useContext } from 'react';
+import { useContext } from 'react';
 import cn from 'classnames';
 import {  IFirstLevelMenu, PageItem } from '../../interfaces/menu.interface';
 import { useRouter } from 'next/router';
@@ -56,23 +56,25 @@ const Menu = (): JSX.Element => {
 	const buildFirstLevel = () => {
 		return (
 			<>
-				{firstLevelMenu.map(c => (
-					<div key={c.route}>
-						<>
-							<Link href={`/${c.route}`}>
-								<div
-									className={cn(styles.firstLevel, {
-										[styles.firstLevelActive]: c.id === firstCategory,
-									})}
-								>
-									{c.icon}
-									<span>{c.name}</span>
-								</div>
-							</Link>
-							{c.id == firstCategory && buildSecondLevel(c)}
-						</>
-					</div>
-				))}
+				{firstLevelMenu.map(c => {
+					return (
+						<div key={c.route}>
+							<>
+								<Link href={`/${c.route}/${menu[0].pages[0]._id}`}>
+									<div
+										className={cn(styles.firstLevel, {
+											[styles.firstLevelActive]: c.id === firstCategory,
+										})}
+									>
+										{c.icon}
+										<span>{c.name}</span>
+									</div>
+								</Link>
+								{c.id == firstCategory && buildSecondLevel(c)}
+							</>
+						</div>
+					);
+				})}
 			</>
 		);
 	};

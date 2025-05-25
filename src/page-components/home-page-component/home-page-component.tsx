@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Button, Card, Heading , Text} from '../../components';
+import { Button, Card, Heading , ScrollUp, Text} from '../../components';
 import { company, timeLineList } from '../../helpers/constants';
 import Navbar from '../../layout/navbar/navbar';
 import styles from './home-page-component.module.css';
@@ -14,7 +14,7 @@ const HomePageComponent = () => {
 			<div className={styles.hero}>
 				<div className={styles.heroTitle}>
 					<Heading tag='h1'>
-						Lern New Skills Online With Sammi <span>Academy</span>
+						Lern New Skills Online With Jonny <span>Academy</span>
 					</Heading>
 					<Text>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nulla adipisci temporibus ad, veniam blanditiis optio
@@ -65,6 +65,7 @@ const HomePageComponent = () => {
 					))}
 				</div>
 			</div>
+			<ScrollUp />
 			<Footer />
 		</div>
 	);
