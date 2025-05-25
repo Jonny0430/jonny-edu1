@@ -16,5 +16,6 @@ export { default as ScrollUp } from './scroll-up/scroll-up';
 export { default as IconButton } from './icon-button/icon-button';
 export { default as CoursePageComponent } from '../page-components/course-gap-component/course-page-component';
 export { default as HomePageComponent } from '../page-components/home-page-component/home-page-component'; 
+export { default as Sort } from './sort/sort';
 
 

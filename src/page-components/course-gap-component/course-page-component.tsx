@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Heading, HhData, Tag, Text } from "../../components"
+import { Heading, HhData, Tag, Text, Sort } from "../../components"
 import styles from './course-page-component.module.css'
 import { CoursePageComponentProps, sortReducer } from "./course-page-component.props";
 import Advantages from "../../components/advantages/advantages";
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 import Product from "../../components/product/product";
-import Sort from "../../components/sort/sort";
 import { useReducer } from "react";
 import { SortEnum } from "../../components/sort/sort.props";
 import { useEffect } from "react";
@@ -43,7 +42,7 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
             {/* {TITLE} */}
             <div className={styles.title}>
                 <Heading tag='h1'>{page.title}</Heading>
-                <Sort />
+                <Sort sort={state.sort} setSort={setSort} />
             </div>
 
 

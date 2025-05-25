@@ -8,6 +8,7 @@ import Sidebar from "./sidebar/sidebar"
 import { AppContextProvider, IAppContext } from "../context/app.context"
 import { ScrollUp } from "../components";
 import router, { useRouter } from "next/router";
+import Seo from './seo/seo';
 
 
 
