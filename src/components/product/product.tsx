@@ -10,7 +10,7 @@ import Button from '../button/button';
 import cn from 'classnames';
 import { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import Review from '../review/review';
-import ReivewForm from '../reivew-form/reivew-form';
+import ReivewForm from '../review-form/review-form';
 import { motion } from 'framer-motion';
 import React from 'react';
 
@@ -38,9 +38,9 @@ const Product = motion(
 		return (
 			<div className={className} ref={ref} {...props}>
 				<Card className={styles.product}>
-					<div className={styles.logo}>
-						<Image src={product.images} alt={product.title} width={70} height={70} />
-					</div>
+					{/* <div className={styles.logo}>
+						<img src={product.images} alt={product.title} width={70} height={70} />
+					</div> */}
 					<div className={styles.title}>{product.title}</div>
 					<div className={styles.price}>
 						{convertToUSD(product.price)}

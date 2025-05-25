@@ -38,7 +38,7 @@ const Navbar = () => {
                 <div className={styles.navigation}>
                     {navLinks.map((nav, idx) => (
                         <Link href={nav.route} key={idx}>
-                            <Text>{nav.name}</Text>
+                           <Text className={styles.navTitle}>{nav.name}</Text>
                         </Link>
                     ))}
                     <Search />
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <motion.div variants={variants} initial={'closed'} animate={isOpen ? 'opened' : 'closed'} className={styles.mobileMenu}>
                     {navLinks.map((nav, idx) => (
                         <Link href={nav.route} key={idx} className={styles.navLink}>
-                            <Text>{nav.name}</Text>
+                            <Text className={styles.navTitle}>{nav.name}</Text>
                         </Link>
                     ))}
                     <Search className={styles.search} />

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { JSX, useState } from "react"
-import styles from './reivew-form.module.css';
-import { ReivewFormProps } from "./reivew-form.props";
+import { useState } from "react"
+import styles from './review-form.module.css';
+import { ReivewFormProps } from "./review-form.props";
 import Rating from "../rating/rating";
 import { Button, TextArea } from "..";
 import Input from '../input/input';

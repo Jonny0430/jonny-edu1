@@ -6,7 +6,7 @@ import Logo from '../logo.svg';
 import React from 'react'; 
 import cn from 'classnames';
 import Link from "next/link";
-import Saerch from "../../components/saerch/saerch";
+import Saerch from "../../components/search/search";
 
 
 const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
