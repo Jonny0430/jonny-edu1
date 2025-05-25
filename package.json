@@ -23,7 +23,10 @@
     "react-hook-form": "^7.43.0",
     "react-icons": "^4.7.1",
     "framer-motion": "^9.0.1",
-    "react-hook-form": "^7.43.0"
+    "react-hook-form": "^7.43.0",
+    "react-event-timeline": "^1.6.3",
+    "react-hook-form": "^7.43.0",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
