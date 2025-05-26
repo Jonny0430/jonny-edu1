@@ -1,4 +1,3 @@
-import { JSX } from "react"
 import Divider from "../divider/divider"
 import { AdvantagesProps } from "./advantages.props"
 import styles from './advantages.module.css';

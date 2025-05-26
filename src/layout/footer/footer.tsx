@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import { FooterProps } from "./footer.props";
 import styles from './footer.module.css';
 import cn from 'classnames';

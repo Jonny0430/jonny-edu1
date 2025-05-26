@@ -1,4 +1,5 @@
 import { SortEnum } from "../../components/sort/sort.props";
+import { PageCategory, PageModel } from "../../interfaces/page.interface";
 import { ProductModel } from "../../interfaces/product.interface";
 export type SortActions = { type: SortEnum.Price } | { type: SortEnum.Rating } | { type: 'reset'; initialState: ProductModel[] };
 
@@ -7,6 +8,13 @@ export interface SortReducerState {
 	products: ProductModel[];
 }
 
+
+export interface CoursePageComponentProps {
+	firstCategory: PageCategory;
+	page: PageModel;
+	products: ProductModel[];
+	
+}
 export const sortReducer = (state: SortReducerState, action: SortActions) => {
 	switch (action.type) {
 		case SortEnum.Rating:

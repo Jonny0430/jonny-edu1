@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import Card from "../card/card";
 import styles from './hh-data.module.css';
 import RateIcon from './rate.svg';

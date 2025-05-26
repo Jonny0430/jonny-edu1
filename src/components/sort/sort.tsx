@@ -24,6 +24,11 @@ const Sort = ({ setSort, sort, className, ...props }: SortProps): JSX.Element =>
 			>
 				<SortIcon className={styles.sortIcon} /> Price
 			</span>
+			<span
+				
+			>
+				<SortIcon className={styles.sortIcon} /> 
+			</span>
 		</div>
 	);
 };

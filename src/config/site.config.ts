@@ -9,8 +9,8 @@ export const siteConfig = {
 		ogImage: 'https://media.graphassets.com/BW4BRUnCQJWCazTdKnVQ',
 	},
 	baseURL: 'https://jonny.ac/',
-	logo: '/logo.svg',
+	logo: 'jonny.svg',
 	logoText: 'Jonny',
-	favicon: '/logo.svg',
+	favicon: 'jonny.svg',
 	copyright: 'Jonny. Barcha huquqlar himoyalangan.',
 };

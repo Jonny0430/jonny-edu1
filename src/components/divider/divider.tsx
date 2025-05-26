@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import { DividerProps } from "./divider.props";
 import cn from 'classnames';
 import styles from './divider.module.css';

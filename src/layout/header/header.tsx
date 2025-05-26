@@ -34,7 +34,7 @@ const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
     return (
         <div className={cn(className, styles.header)} {...props}>
             <Link href={'/'}>
-                <LogoIcon />
+                {/* <LogoIcon /> */}
             </Link>
             <IconButton icon='menu' appearance="white" onClick={toggleMenu} />
             <motion.div variants={variants} initial={'closed'} animate={isOpen ? 'opened' : 'closed'} className={styles.mobileMenu}>

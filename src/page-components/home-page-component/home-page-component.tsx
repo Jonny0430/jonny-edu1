@@ -20,7 +20,7 @@ const HomePageComponent = () => {
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nulla adipisci temporibus ad, veniam blanditiis optio
 						voluptatibus eius id, eaque, ex aperiam quam voluptatum deleniti quos? Quis voluptatum rem quaerat.
 					</Text>
-					<Button appearance='success' arrow='right'>
+					<Button appearance='primary' arrow='right'>
 						Join For Free
 					</Button>
 				</div>

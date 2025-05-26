@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { ForwardedRef, JSX } from "react";
+import { ForwardedRef } from "react";
 import { InputProps } from "./input.props";
 import styles from "./input.module.css";
 import cn from 'classnames';

@@ -2,7 +2,6 @@ import { ButtonProps } from './button.props';
 import styles from './button.module.css';
 import cn from 'classnames';
 import ArrowIcon from './arrow.svg';
-import { JSX } from 'react';
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
 const Button = ({ appearance, arrow = 'none', className, children, ...props }: ButtonProps): JSX.Element => {

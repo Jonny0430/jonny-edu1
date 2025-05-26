@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import { ReviewProps } from "./review.props";
 import UserIcon from './user.svg';
 import styles from './review.module.css';

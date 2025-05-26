@@ -3,6 +3,7 @@ import styles from './navbar.module.css';
 import { navLinks } from "../../helpers/constants";
 import Link from "next/link";
 import Logo from '../logo.svg';
+import Jonny from '../jonny.svg';
 import { IconButton, Search, Text } from '../../components';
 import { motion } from 'framer-motion';
 import React from 'react';
@@ -33,7 +34,7 @@ const Navbar = () => {
         <div className={styles.navbar}>
             <nav className={styles.nav}>
                 <Link href={'/'}>
-                    <Logo className={styles.logo} />
+                    {/* <Logo className={styles.logo} /> */}
                 </Link>
                 <div className={styles.navigation}>
                     {navLinks.map((nav, idx) => (

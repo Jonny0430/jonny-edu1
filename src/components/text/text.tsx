@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import cn from 'classnames';
 import { TextProps } from "./text.props";
 import styles from './text.module.css';

@@ -1,5 +1,4 @@
 /* eslint-disable react/display-name */
-import { JSX } from "react";
 import { TextAreaProps } from "./text-area.props";
 import styles from "./text-area.module.css";
 import cn from 'classnames';

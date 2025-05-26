@@ -1,5 +1,5 @@
-import { JSX } from "react";
 import { PageCategory } from "./page.interface";
+import React from 'react';
 
 export interface MenuItem {
     

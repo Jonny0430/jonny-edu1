@@ -1,4 +1,3 @@
-import { JSX } from "react"
 import styles from './heading.module.css';
 import { HeadingProps } from "./heading.props"
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi

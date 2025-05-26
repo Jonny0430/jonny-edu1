@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { ForwardedRef, JSX } from "react";
+import { ForwardedRef } from "react";
 import { CardProps } from "./card.props";
 import styles from './card.module.css';
 import cn from 'classnames';
