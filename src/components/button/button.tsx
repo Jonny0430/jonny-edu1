@@ -1,6 +1,6 @@
 import { ButtonProps } from './button.props';
 import styles from './button.module.css';
-import cn from 'classnames';
+import cn from 'classnames'
 import ArrowIcon from './arrow.svg';
 import React from 'react';  // React komponentlarini ishlatish uchun import qilinadi
 
